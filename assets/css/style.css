@@ -108,8 +108,15 @@ Headers:		'Lato', sans-serif;
 }
 #page-header .primary-nav #brand {
   display: block;
-  padding: 10px 10px 10px 0;
+  /* padding: 10px 10px 10px 0; */
 }
+
+/* add para aumentar o tamanho da imagem no menu principal */
+#icone-menu-principal{
+  width: 180px;
+  height: 45px;
+}
+
 #page-header .primary-nav .left {
   position: relative;
 }
@@ -587,6 +594,7 @@ ul.half li {
 .bg-transfer {
   background-size: cover;
   /*background-image: url("../img/footer-bg.jpg");*/
+  background-color: white;
   position: absolute;
   top: 0;
   left: 0;

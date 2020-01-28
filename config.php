@@ -6,12 +6,15 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
+	// CONFIGURACAO ORIGINAL
 	// define("BASE_URL", "http://localhost/republica/");
 	// $config['dbname'] = 'republicaon';
 	// $config['host'] = 'localhost';
 	// $config['dbuser'] = 'root';
 	// $config['dbpass'] = '';
-	define("BASE_URL", "http://localhost/republica/");
+
+	//PARA FUNCIONAR COM O BANCO DO NILSON
+	define("BASE_URL", "http://192.168.0.106/republica/");
 	$config['dbname'] = 'republicaon';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'paiva';

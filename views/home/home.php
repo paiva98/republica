@@ -30,86 +30,13 @@
                                     <!--end favorite-searches-->
                                 </div>
                                 <!--end container-->
-                                <div class="bg-transfer"><img src="assets/img/bg-hero.jpg" alt=""></div>
+                                <div class="bg-transfer"><img src="assets/img/vicosa.jpeg" alt=""></div>
                                 <!--end bg-transfer-->
                             </div>
                             <!--end inner-->
                         </div>
                         <!--end caption-->
-                        <div class="options">
-                            <div class="container">
-                                <div class="wrapper">
-                                    <h2>Outras Opções</h2>
-                                    <form action="<?php echo BASE_URL; ?>republic/list">
-                                    <div class="row">
-                                        <div class="col-md-7 col-sm-7">
-                                            <ul class="checkboxes inline list-unstyled">
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="hotel">Hotel
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="apartment">Sítio / Chacára
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="breakfast-only">Apartamento
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="spa-wellness">Casa
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <!--end checkboxes-->
-                                        </div>
-                                        <!--end col-md-8-->
-                                        <div class="col-md-3 col-sm-5">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>Mensalidade</label>
-                                                        <select class="form-control framed white">
-                                                            <option value="">$0 - $250</option>
-                                                            <option value="">$251 - $450</option>
-                                                            <option value="">$450+</option>
-                                                        </select>
-                                                    </div>
-                                                    <!--end form-group-->
-                                                </div>
-                                                <!--end col-md-6-->
-                                                
-                                                <!--end col-md-6-->
-                                            </div>
-                                            <!--end row-->
-                                        </div>
-                                         <div class="col-md-2 col-sm-5">
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-6">
-                                                    <div class="form-group">
-                                                        <input type="submit" value="Pesquisar" class="btn btn-primary">
-                                                    </div>
-                                                    <!--end form-group-->
-                                                </div>
-                                                <!--end col-md-6-->
-                                                
-                                                <!--end col-md-6-->
-                                            </div>
-                                            <!--end row-->
-                                        </div>
-
-                                        <!--end col-md-4-->
-                                    </div>
-                                    <!--end row-->
-                                </div>
-                                <!--end wrapper-->
-                            </div>
-                            <!--end container-->
-                        </div>
+                        <!-- Os filtros excluidos -->
                         <!--end options-->
                     </div>
                     <!--end hero-wrapper-->
@@ -255,60 +182,6 @@
 
             <?php endif; ?>
             <!--end block-->
-            <?php if ($republics_registered != 0): ?>
-                <div class="block">
-                    <div class="container">
-                        <div class="title">
-                            <h2 class="pull-left">Repúblicas Cadastradas</h2>
-                        </div>
-                        <!--end title-->
-                        <div class="row">
-                            <div class="col-md-9 col-sm-8">
-                                <div class="row">
-                                    <?php foreach ($republics_registered as $key => $value): ?>
-                                        <div class="col-md-3 col-sm-6">
-                                            <a href="<?php echo BASE_URL; ?>republic/see/<?php echo $value['id_republic']; ?>" class="item small">
-                                                <div class="image">
-                                                    <div class="info">
-                                                        <figure class="label label-info"><?php echo $value['property_type']; ?></figure>
-                                                        <aside>
-                                                            <h3><?php echo $value['name']; ?></h3>
-                                                        </aside>
-                                                    </div>
-                                                    <div class="wrapper">
-                                                        <div class="gallery">
-                                                            <img src="<?php echo BASE_URL; ?><?php echo $value['images'][0]['way']; ?>" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--end image-->
-                                                <div class="description">
-                                                    <div class="meta">
-                                                        <span><i class="fa fa-handshake-o"></i>8.9</span>
-                                                        <span><i class="fa fa-users"></i>250</span>
-                                                    </div>
-                                                </div>
-                                                <!--end description-->
-                                            </a>
-                                            <!--end item-->
-                                        </div>    
-                                    <?php endforeach ?>
-                                    
-                                    
-                                </div>
-                                <!--end row-->
-                                <a href="listing.html" class="pull-right">Ver todas</a>
-                            </div>
-                            <div class="col-md-3 col-sm-4">
-                                <a href="#" class="advertising-banner">
-                                    <img src="<?php echo BASE_URL; ?>assets/img/ads_republicasON.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end container-->
-                </div>    
-            <?php endif ?>
             
             <!--end block-->
 
