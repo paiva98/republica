@@ -14,7 +14,7 @@ if(ENVIRONMENT == 'development') {
 	// $config['dbpass'] = '';
 
 	//PARA FUNCIONAR COM O BANCO DO NILSON
-	define("BASE_URL", "http://192.168.0.106/republica/");
+	define("BASE_URL", "http://localhost/republica/");
 	$config['dbname'] = 'republicaon';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'paiva';
