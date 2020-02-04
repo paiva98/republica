@@ -1,2 +1,0 @@
-# republicaon
-Deixar privado depois

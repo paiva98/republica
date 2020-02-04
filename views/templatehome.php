@@ -82,7 +82,7 @@
                 <div class="container">
                     <div class="primary-nav">
                         <div class="left">
-                            <a href="<?php echo BASE_URL; ?>" id="brand"><img id="icone-menu-principal" src="<?php echo BASE_URL; ?>assets/img/logo.png" alt=""></a>
+                            <a href="<?php echo BASE_URL; ?>" id="brand"><img src="<?php echo BASE_URL; ?>assets/img/logo.png" alt=""></a>
                             <a class="nav-trigger" data-toggle="collapse" href="#primary-nav" aria-expanded="false" aria-controls="primary-nav"><i class="fa fa-navicon"></i></a>
                         </div>
                         <!--end left-->
