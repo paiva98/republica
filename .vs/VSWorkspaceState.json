@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\controllers",
+    "\\core",
+    "\\models",
+    "\\views",
+    "\\views\\home"
+  ],
+  "SelectedNode": "\\controllers\\republicController.php",
+  "PreviewInSolutionExplorer": false
+}

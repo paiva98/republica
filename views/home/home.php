@@ -30,7 +30,7 @@
                                     <!--end favorite-searches-->
                                 </div>
                                 <!--end container-->
-                                <div class="bg-transfer"><img src="assets/img/bg-hero.jpg" alt=""></div>
+                                <div class="bg-transfer"><img src="assets/img/vicosa_fundo.jpg" alt=""></div>
                                 <!--end bg-transfer-->
                             </div>
                             <!--end inner-->
@@ -39,70 +39,14 @@
                         <div class="options">
                             <div class="container">
                                 <div class="wrapper">
-                                    <h2>Outras Opções</h2>
                                     <form action="<?php echo BASE_URL; ?>republic/list">
                                     <div class="row">
                                         <div class="col-md-7 col-sm-7">
-                                            <ul class="checkboxes inline list-unstyled">
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="hotel">Hotel
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="apartment">Sítio / Chacára
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="breakfast-only">Apartamento
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label>
-                                                        <input type="checkbox" name="spa-wellness">Casa
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <!--end checkboxes-->
+                                                <!--colocar algumas de nossas republicas-->
                                         </div>
                                         <!--end col-md-8-->
-                                        <div class="col-md-3 col-sm-5">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>Mensalidade</label>
-                                                        <select class="form-control framed white">
-                                                            <option value="">$0 - $250</option>
-                                                            <option value="">$251 - $450</option>
-                                                            <option value="">$450+</option>
-                                                        </select>
-                                                    </div>
-                                                    <!--end form-group-->
-                                                </div>
-                                                <!--end col-md-6-->
-                                                
-                                                <!--end col-md-6-->
-                                            </div>
-                                            <!--end row-->
-                                        </div>
-                                         <div class="col-md-2 col-sm-5">
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-6">
-                                                    <div class="form-group">
-                                                        <input type="submit" value="Pesquisar" class="btn btn-primary">
-                                                    </div>
-                                                    <!--end form-group-->
-                                                </div>
-                                                <!--end col-md-6-->
-                                                
-                                                <!--end col-md-6-->
-                                            </div>
-                                            <!--end row-->
-                                        </div>
-
-                                        <!--end col-md-4-->
+                                       
+                                        
                                     </div>
                                     <!--end row-->
                                 </div>
@@ -114,26 +58,62 @@
                     </div>
                     <!--end hero-wrapper-->
                     <div id="options-hidden" class="collapse">
-                        <div class="container">
-                            <div class="wrapper">
-                                <h2>Instalações</h2>
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-6">
-                                        <ul class="checkboxes inline">
-                                            <li><label><input type="checkbox" name="search_options">Wi-fi</label></li>
-                                            <li><label><input type="checkbox" name="free-parking">Quintal</label></li>
-                                            <li><label><input type="checkbox" name="airport">Animal de Estimação</label></li>
-                                            <li><label><input type="checkbox" name="family-rooms">Área de lazer</label></li>
-                                            <li><label><input type="checkbox" name="pets">Área de estudo</label></li>
-                                            <li><label><input type="checkbox" name="restaurant">Quarto Individual</label></li>
-                                            <li><label><input type="checkbox" name="indoor-pool">Quarto Compartilhado</label></li>
-                                            <li><label><input type="checkbox" name="brakfast-only">Diarista</label></li>
-                                        </ul>
-                                        <!--end checkboxes-->
-                                    </div>
+
+                                <div class="row" style="text-align: center !important">                                    
                                     <!--end col-md-8-->
-                                    <div class="col-md-4"></div>
-                                    </form>
+                                    <?php if ($republics_registered != 0): ?>
+                                        <div class="block">
+                                            <div class="container">
+                                                <div class="title">
+                                                    <h2>Conheça nossas repúblicas</h2>
+                                                </div>
+                                                <!--end title-->
+                                                <div class="row" style="margin-left: 18%">
+                                                    <div class="col-md-9 col-sm-8">
+                                                        <div class="row">
+                                                            <?php foreach ($republics_registered as $key => $value): ?>
+                                                                <div class="col-md-3 col-sm-6">
+                                                                    <a href="<?php echo BASE_URL; ?>republic/see/<?php echo $value['id_republic']; ?>" class="item small">
+                                                                        <div class="image">
+                                                                            <div class="info">
+                                                                                <figure class="label label-info"><?php echo $value['property_type']; ?></figure>
+                                                                                <aside>
+                                                                                    <h3><?php echo $value['name']; ?></h3>
+                                                                                </aside>
+                                                                            </div>
+                                                                            <div class="wrapper">
+                                                                                <div class="gallery">
+                                                                                    <img src="<?php echo BASE_URL; ?><?php echo $value['images'][0]['way']; ?>" alt="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--end image-->
+                                                                        <div class="description">
+                                                                            <div class="meta">
+                                                                                <span><i class="fa fa-handshake-o"></i>8.9</span>
+                                                                                <span><i class="fa fa-users"></i>250</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--end description-->
+                                                                    </a>
+                                                                    <!--end item-->
+                                                                </div>    
+                                                                <?php endforeach ?>
+                                    
+                                    
+                                </div>
+                                <!--end row-->
+                                <a href="listing.html" class="pull-right">Ver todas</a>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <a href="#" class="advertising-banner">
+                                    <img src="<?php echo BASE_URL; ?>assets/img/ads_republicasON.png" alt="">
+                                </a>
+                    </div>
+                    <!--end container-->
+                </div>    
+            <?php endif ?>
+                                    
                                     <!--end col-md-4-->
                                 </div>
                                 <!--end row-->
@@ -145,7 +125,7 @@
                 </div>
                 <!--end hero-inner-->
                 <div class="plate">
-                    <a data-toggle="collapse" href="#options-hidden" aria-expanded="false" aria-controls="options-hidden">Opções de Instalações</a>
+                    <a data-toggle="collapse" href="#options-hidden" aria-expanded="false" aria-controls="options-hidden">Algumas de nossas republicaslações</a>
                 </div>
                 <!--end plate-->
             
@@ -255,62 +235,7 @@
 
             <?php endif; ?>
             <!--end block-->
-            <?php if ($republics_registered != 0): ?>
-                <div class="block">
-                    <div class="container">
-                        <div class="title">
-                            <h2 class="pull-left">Repúblicas Cadastradas</h2>
-                        </div>
-                        <!--end title-->
-                        <div class="row">
-                            <div class="col-md-9 col-sm-8">
-                                <div class="row">
-                                    <?php foreach ($republics_registered as $key => $value): ?>
-                                        <div class="col-md-3 col-sm-6">
-                                            <a href="<?php echo BASE_URL; ?>republic/see/<?php echo $value['id_republic']; ?>" class="item small">
-                                                <div class="image">
-                                                    <div class="info">
-                                                        <figure class="label label-info"><?php echo $value['property_type']; ?></figure>
-                                                        <aside>
-                                                            <h3><?php echo $value['name']; ?></h3>
-                                                        </aside>
-                                                    </div>
-                                                    <div class="wrapper">
-                                                        <div class="gallery">
-                                                            <img src="<?php echo BASE_URL; ?><?php echo $value['images'][0]['way']; ?>" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--end image-->
-                                                <div class="description">
-                                                    <div class="meta">
-                                                        <span><i class="fa fa-handshake-o"></i>8.9</span>
-                                                        <span><i class="fa fa-users"></i>250</span>
-                                                    </div>
-                                                </div>
-                                                <!--end description-->
-                                            </a>
-                                            <!--end item-->
-                                        </div>    
-                                    <?php endforeach ?>
-                                    
-                                    
-                                </div>
-                                <!--end row-->
-                                <a href="listing.html" class="pull-right">Ver todas</a>
-                            </div>
-                            <div class="col-md-3 col-sm-4">
-                                <a href="#" class="advertising-banner">
-                                    <img src="<?php echo BASE_URL; ?>assets/img/ads_republicasON.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end container-->
-                </div>    
-            <?php endif ?>
-            
-            <!--end block-->
+
 
             <div class="block">
                 <div class="container">
@@ -365,7 +290,7 @@
                 <div class="space"></div>
             </div>
             <!--end block-->
-
+            <!-- conheça -->
             <div class="block">
                 <div class="container">
                     <div class="title">
@@ -419,111 +344,7 @@
                     <img src="<?php echo BASE_URL; ?>assets/img/bg-map.jpg" alt="">
                 </div>
             </div>
-            <!--end block-->
-            <!--
-            <div class="container">
-                <div class="block">
-                    <form class="marketing-form">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="form-group-inline vertical-align-middle no-margin">
-                                    <div class="form-group">
-                                        <h3 class="font-color-white no-margin"> Save up to 50% off your next trip</h3>
-                                        <p class="font-color-white no-margin">Secret Deals – for our subscribers only</p>
-                                    </div>
-                                    <div class="form-group width-50">
-                                        <input type="email" class="form-control input-dark" name="location" placeholder="Your email">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="bg color default"></div>
-                </div>
-            </div>
-            -->
-            <!--end block-->
-
-            <!--
-            <div class="block">
-                <div class="container">
-                    <div class="title">
-                        <h2>Our Picks</h2>
-                    </div>
-                   
-                    <div class="grid masonry">
-                        <div class="grid-item">
-                            <a href="#">
-                                <h3>Switzerland</h3>
-                                <img src="<?php echo BASE_URL; ?>assets/img/items/pick-01.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item">
-                            <a href="#">
-                                <h3>Prague</h3>
-                                <img src="<?php echo BASE_URL; ?>assets/img/items/pick-02.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item grid-item--width2">
-                            <a href="#">
-                                <h3>Norway</h3>
-                                <img src="<?php echo BASE_URL; ?>assets/img/items/pick-03.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item grid-item--width2">
-                            <a href="#">
-                                <h3>Machu Picchu</h3>
-                                <img src="<?php echo BASE_URL; ?>assets/img/items/pick-04.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item">
-                            <a href="#">
-                                <h3>Tuscany</h3>
-                                <img src="<?php echo BASE_URL; ?>assets/img/items/pick-05.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            -->
-            <!--end block-->
-            <!--
-            <div class="block">
-                <div class="container">
-                    <div class="title">
-                        <h2>Favorite Destinations</h2>
-                    </div>
-                   
-                   <ul class="list-links">
-                       <li><a href="#">Tenerife<span>23</span></a></li>
-                       <li><a href="#">Al Madinah<span>12</span></a></li>
-                       <li><a href="#">Koh Samui<span>76</span></a></li>
-                       <li><a href="#">Cotswolds<span>52</span></a></li>
-                       <li><a href="#">Lake District<span>63</span></a></li>
-                       <li><a href="#">Cornwall<span>15</span></a></li>
-                       <li><a href="#">Algarve<span>19</span></a></li>
-                       <li><a href="#">Ibiza<span>90</span></a></li>
-                       <li><a href="#">New Forest<span>57</span></a></li>
-                       <li><a href="#">Phuket Province<span>82</span></a></li>
-                       <li><a href="#">Loch Lomond<span>24</span></a></li>
-                       <li><a href="#">Gran Canaria<span>23</span></a></li>
-                       <li><a href="#">Majorca<span>33</span></a></li>
-                       <li><a href="#">Isle of Wight<span>74</span></a></li>
-                       <li><a href="#">Jersey<span>51</span></a></li>
-                       <li><a href="#">Isle of Man<span>23</span></a></li>
-                       <li><a href="#">Santoríni<span>36</span></a></li>
-                       <li><a href="#">Mykonos<span>55</span></a></li>
-                       <li><a href="#">Lanzarote<span>78</span></a></li>
-                       <li><a href="#">Bali<span>17</span></a></li>
-                   </ul>
-                    <!--end list-links-->
-                </div>
-                <!--end container-->
-            </div>
-            <!--end block-->
-
-          
-            <!--end block-->
-    </div>
+            <!--end conheça -->
+        </div>
 
         

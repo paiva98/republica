@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/zabuto_calendar.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/new_style.css" type="text/css">
+
 
     <link href="<?php echo BASE_URL; ?>assets/css/login-register.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -82,7 +84,7 @@
                 <div class="container">
                     <div class="primary-nav">
                         <div class="left">
-                            <a href="<?php echo BASE_URL; ?>" id="brand"><img src="<?php echo BASE_URL; ?>assets/img/logo.png" alt=""></a>
+                            <a href="<?php echo BASE_URL; ?>" id="brand"><img id="new_style_img_logo" src="<?php echo BASE_URL; ?>assets/img/logo.png" alt=""></a>
                             <a class="nav-trigger" data-toggle="collapse" href="#primary-nav" aria-expanded="false" aria-controls="primary-nav"><i class="fa fa-navicon"></i></a>
                         </div>
                         <!--end left-->
@@ -96,41 +98,18 @@
                                         <ul class="child-nav">
                                             <li><a href="<?php echo BASE_URL; ?>republic/list?search=Mista">MISTA</a></li>
                                             <li><a href="<?php echo BASE_URL; ?>republic/list?search=Masculina">MASCULINA</a></li>
-                                            <li><a href="<?php echo BASE_URL; ?>republic/list?search=Feminina">FEMININA</a></li>
-                                            <!-- SUBMENU 
-                                            <li>
-                                                <a href="#" class="has-child">Admin</a>
-                                                <ul class="child-nav">
-                                                    <li><a href="edit.html">Edit Accommodation</a></li>
-                                                    <li><a href="my-accommodations.html">My Accommodations</a></li>
-                                                    <li><a href="profile.html">Profile</a></li>
-                                                    <li><a href="reservations.html">Reservations</a></li>
-                                                    <li><a href="reviews.html">Reviews</a></li>
-                                                </ul>
-                                            </li>
-                                            -->
-                                           
+                                            <li><a href="<?php echo BASE_URL; ?>republic/list?search=Feminina">FEMININA</a></li>                                           
                                         </ul>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo BASE_URL; ?>" class="has-child">OUTROS IMÓVEIS</a>
                                     </li>
                                     <li>
                                         <a href="#" class="has-child">EVENTOS</a>
                                         <ul class="child-nav">
                                             <li><a href="<?php echo BASE_URL; ?>">MISTA</a></li>
                                             <li><a href="<?php echo BASE_URL; ?>">MASCULINA</a></li>
-                                            <li><a href="<?php echo BASE_URL; ?>">FEMININA</a></li>
-                                            <!-- SUBMENU 
-                                            <li>
-                                                <a href="#" class="has-child">Admin</a>
-                                                <ul class="child-nav">
-                                                    <li><a href="edit.html">Edit Accommodation</a></li>
-                                                    <li><a href="my-accommodations.html">My Accommodations</a></li>
-                                                    <li><a href="profile.html">Profile</a></li>
-                                                    <li><a href="reservations.html">Reservations</a></li>
-                                                    <li><a href="reviews.html">Reviews</a></li>
-                                                </ul>
-                                            </li>
-                                            -->
-                                           
+                                            <li><a href="<?php echo BASE_URL; ?>">FEMININA</a></li>                                           
                                         </ul>
                                     </li>
                                       <li>

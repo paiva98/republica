@@ -1,0 +1,33 @@
+Página Home
+[x] Aumentar o tamanho da logo
+[x] Remover filtros
+[x] Trocar a foto de fundo por uma foto de viçosa
+[x] Colocar no lugar do filtro (algumas de nossas republicas)
+[x] Remover bloco republicas cadastradas
+[ ] Trocar os patrocinadores
+    ( ? por quais)
+
+[ ] Outros imóveis (para imobiliária)
+
+[ ] Excluir republica
+
+[ ] Chamada (Clique aqui e cadastre sua republica )
+    ( ? como assim Chamada)
+
+[ ] na ppágina inicial Arrumar os links do rodapé
+    ( ? o que é listagem. Seria Listar todas as repúblicas?)
+
+[ ] Sobre Nós 
+    ( ? o que falta)
+
+[ ] Ajustar os textos em português
+
+[ ] E-mail fernando: fernando.a.alves@ufv.br
+
+[ ] Colocar comentários na página inicial
+
+[ ] Adicionar Categoria LGBT
+
+[ ] Criar a página Evento
+
+[ ] Criar a Página Oportunidades
