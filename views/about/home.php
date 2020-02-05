@@ -49,7 +49,7 @@
                                             <div class="info">
                                                 <dl>
                                                     <dt>Email:</dt>
-                                                    <dd><a href="mailto:kate.brown@example.com">kate.brown@example.com</a></dd>
+                                                    <dd><a href="mailto:kate.brown@example.com">fernando.a.alves@ufv.br/a></dd>
                                                 </dl>
                                             </div>
                                             <!--end info-->
