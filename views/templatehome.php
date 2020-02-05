@@ -97,6 +97,7 @@
                                         <a href="#" class="has-child">REPÚBLICAS</a>
                                         <ul class="child-nav">
                                             <li><a href="<?php echo BASE_URL; ?>republic/list?search=Mista">MISTA</a></li>
+                                            <li><a href="<?php echo BASE_URL; ?>republic/list?search=LGBT">LGBT</a></li> 
                                             <li><a href="<?php echo BASE_URL; ?>republic/list?search=Masculina">MASCULINA</a></li>
                                             <li><a href="<?php echo BASE_URL; ?>republic/list?search=Feminina">FEMININA</a></li>                                           
                                         </ul>
