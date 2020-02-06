@@ -26,7 +26,7 @@ Página Home
 
 [ ] Colocar comentários na página inicial
 
-[ ] Adicionar Categoria LGBT
+[x] Adicionar Categoria LGBT
 
 [ ] Criar a página Evento
 

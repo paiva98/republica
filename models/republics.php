@@ -710,6 +710,38 @@ class republics extends model {
 		    return $string;
 	}
 
+	function getComments(){
+		$sql = "SELECT users.name, users.img_profile, comments.message, comments.date_comments, comments.id_comments
+				from comments 
+				INNER JOIN users ON users.id_user = comments.id_pessoa 
+				ORDER BY date_comments ASC";
+		$sql = $this->db->prepare($sql);
+		$sql->execute();
+
+		$result = array();
+
+		$result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+		return $result;
+
+	}
+	function getAnswer( $id_comment){
+		$sql = "SELECT users.name, users.img_profile, comment_answer.message, comment_answer.date_comments
+				from comment_answer
+				INNER JOIN users ON users.id_user = comment_answer.id_pessoa
+				WHERE comment_answer.id_comments = :id_comments
+				ORDER BY date_comments ASC";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(":id_comments", $id_comment);
+		$sql->execute();
+
+		$result = array();
+
+		$result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+		return $result;
+
+	}
 		
 	  
 		

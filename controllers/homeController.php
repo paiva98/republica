@@ -20,8 +20,21 @@ class homeController extends controller {
       
       
       $dados['republics_registered'] = $republics->getlist(0, 8, $filters['order']);
+      
 
+      $comments = $republics->getComments();
+      $dados['comment'] = $comments;
+      
+      
+      $answer = array();
+      foreach( $comments as  $comm){
+        $answer[ $comm['id_comments']  ]  = $republics->getAnswer($comm['id_comments']);
+      }
+      
+      $dados['answer'] = $answer;
+      
       $this->loadTemplate('home','home/home', $dados);
+
     }
 
     public function register() {
