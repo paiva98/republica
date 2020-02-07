@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 06-Fev-2020 às 23:56
+-- Tempo de geração: 07-Fev-2020 às 19:59
 -- Versão do servidor: 5.7.24
 -- versão do PHP: 7.2.19
 
@@ -86,6 +86,7 @@ INSERT INTO `address_republic` (`id_address_republic`, `republic_id`, `longitude
 
 CREATE TABLE `comments` (
   `id_comments` int(11) NOT NULL,
+  `id_republic` int(11) NOT NULL,
   `id_pessoa` int(11) NOT NULL,
   `message` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `date_comments` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -95,9 +96,9 @@ CREATE TABLE `comments` (
 -- Extraindo dados da tabela `comments`
 --
 
-INSERT INTO `comments` (`id_comments`, `id_pessoa`, `message`, `date_comments`) VALUES
-(1, 1, 'Mensagem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sem ut sollicitudin consectetur, augue diam ornare massa, ac vehicula leo turpis eget purus. Nunc pellentesque vestibulum mauris, eget suscipit mauris imperdiet vel. Nulla et massa metus. Nam porttitor quam eget ante elementum consectetur. Aenean ac nisl et nulla placerat suscipit eu a mauris. Curabitur quis augue condimentum, varius mi in, ultricies velit. Suspendisse potenti.', '2020-02-05 21:54:32'),
-(3, 1, 'MENSAGEM Quisque iaculis neque at dui cursus posuere. Sed tristique pharetra orci, eu malesuada ante tempus nec. Phasellus enim odio, facilisis et ante vel, tempor congue sapien. Praesent eget ligula eu libero cursus facilisis vel non arcu. Sed vitae quam enim.', '2020-02-05 21:53:57');
+INSERT INTO `comments` (`id_comments`, `id_republic`, `id_pessoa`, `message`, `date_comments`) VALUES
+(1, 39, 1, 'Mensagem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sem ut sollicitudin consectetur, augue diam ornare massa, ac vehicula leo turpis eget purus. Nunc pellentesque vestibulum mauris, eget suscipit mauris imperdiet vel. Nulla et massa metus. Nam porttitor quam eget ante elementum consectetur. Aenean ac nisl et nulla placerat suscipit eu a mauris. Curabitur quis augue condimentum, varius mi in, ultricies velit. Suspendisse potenti.', '2020-02-07 16:24:27'),
+(3, 82, 1, 'MENSAGEM Quisque iaculis neque at dui cursus posuere. Sed tristique pharetra orci, eu malesuada ante tempus nec. Phasellus enim odio, facilisis et ante vel, tempor congue sapien. Praesent eget ligula eu libero cursus facilisis vel non arcu. Sed vitae quam enim.', '2020-02-07 16:24:40');
 
 -- --------------------------------------------------------
 
