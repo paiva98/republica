@@ -22,12 +22,16 @@ Página Home
 
 [ ] Ajustar os textos em português
 
-[ ] E-mail fernando: fernando.a.alves@ufv.br
+[x] E-mail fernando: fernando.a.alves@ufv.br
 
-[ ] Colocar comentários na página inicial
+[ ] Colocar comentários na parte detalhes da república
 
 [x] Adicionar Categoria LGBT
 
 [ ] Criar a página Evento
 
 [ ] Criar a Página Oportunidades
+
+---------------------------------------------------------------
+
+[ ] Colocar depoimentos na página inicial
