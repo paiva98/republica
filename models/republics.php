@@ -710,12 +710,14 @@ class republics extends model {
 		    return $string;
 	}
 
-	function getComments(){
+	function getComments($id){
 		$sql = "SELECT users.name, users.img_profile, comments.message, comments.date_comments, comments.id_comments
 				from comments 
-				INNER JOIN users ON users.id_user = comments.id_pessoa 
+				INNER JOIN users ON users.id_user = comments.id_pessoa
+				WHERE comments.id_republic = :id
 				ORDER BY date_comments ASC";
 		$sql = $this->db->prepare($sql);
+		$sql->bindValue(":id" , $id);
 		$sql->execute();
 
 		$result = array();

@@ -272,6 +272,18 @@ class republicController extends controller {
       $filters['republic_id'] = $id;
       $dados['republics_info'] = $republics->getInfo($id);
       $dados['republics_vacancies'] = $republics->getlistVacancies(0, 8, $filters);
+
+      $comments = $republics->getComments($id);
+      $dados['comment'] = $comments;
+      
+      
+      $answer = array();
+      foreach( $comments as  $comm){
+        $answer[ $comm['id_comments']  ]  = $republics->getAnswer($comm['id_comments']);
+      }
+      
+      $dados['answer'] = $answer;
+
       $this->loadTemplate("home","republic/singler", $dados);
     }
 
