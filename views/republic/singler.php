@@ -1,4 +1,4 @@
-
+<div class="container">
     <div id="page-content">
         <div class="container">
             <ol class="breadcrumb">
@@ -289,82 +289,83 @@
                                 </div>
                                 <!--end form-reservations-->
                             </section>
-                        <?php endif; ?>                       
-                       <!-- commentarios -->
-                         <div class="">
-                            <section id="comments">
-                                <header><h2 class="no-border">Comments</h2></header>
-                                    
-                                    <?php foreach( $comment as $comm){?>
-                                                <ul class="comments">
-                                                                <li class="comment">
-                                                                    <figure>
-                                                                        <div class="image">
-                                                                            <img alt="" src="<?php echo $comm['img_profile'] ?>">
-                                                                        </div>
-                                                                    </figure>
-                                                                    <div class="comment-wrapper">
-                                                                        <div class="name pull-left"><?php echo $comm['name'] ?></div>
-                                                                        <span class="date pull-right"><span class="fa fa-calendar"></span><?php echo $comm['date_comments'] ?></span>
-                                                                        <p>
-                                                                            <?php echo $comm['message'] ?>
-                                                                        </p>
-                                                                        <a href="#" class="reply"><span class="fa fa-reply"></span>Reply</a>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
+                        <?php endif; ?>   
 
-                                                                <?php foreach( $answer[$comm['id_comments']] as $ans ){  ?>
-                                                                <ul class="comments-child">
-                                                                        <li class="comment">
-                                                                            <figure>
-                                                                                <div class="image">
-                                                                                    <img alt="" src="<?php echo $ans['img_profile'] ?>">
+                        <!-- commentarios -->
+                            <div class="">
+                                <section id="comments">
+                                    <header><h2 class="no-border">Comments</h2></header>
+                                        
+                                        <?php foreach( $comment as $comm){?>
+                                                    <ul class="comments">
+                                                                    <li class="comment">
+                                                                        <figure>
+                                                                            <div class="image">
+                                                                                <img alt="" src="<?php echo $comm['img_profile'] ?>">
                                                                             </div>
                                                                         </figure>
                                                                         <div class="comment-wrapper">
-                                                                            <div class="name"> <?php echo $ans['name'] ?></div>
-                                                                            <span class="date"><span class="fa fa-calendar"></span> <?php echo $ans['date_comments'] ?> </span>
+                                                                            <div class="name pull-left"><?php echo $comm['name'] ?></div>
+                                                                            <span class="date pull-right"><span class="fa fa-calendar"></span><?php echo $comm['date_comments'] ?></span>
                                                                             <p>
-                                                                            <?php echo $ans['message'] ?>
+                                                                                <?php echo $comm['message'] ?>
                                                                             </p>
                                                                             <a href="#" class="reply"><span class="fa fa-reply"></span>Reply</a>
                                                                         </div>
                                                                     </li>
-                                                                </ul>
-                                                                <?php } ?>
+                                                                    <li>
 
-                                                            <hr>
-                                                        </li>
-                                                    </ul>
-                                    <?php } ?>
-                            </section><!-- /#comments -->
+                                                                    <?php foreach( $answer[$comm['id_comments']] as $ans ){  ?>
+                                                                    <ul class="comments-child">
+                                                                            <li class="comment">
+                                                                                <figure>
+                                                                                    <div class="image">
+                                                                                        <img alt="" src="<?php echo $ans['img_profile'] ?>">
+                                                                                </div>
+                                                                            </figure>
+                                                                            <div class="comment-wrapper">
+                                                                                <div class="name"> <?php echo $ans['name'] ?></div>
+                                                                                <span class="date"><span class="fa fa-calendar"></span> <?php echo $ans['date_comments'] ?> </span>
+                                                                                <p>
+                                                                                <?php echo $ans['message'] ?>
+                                                                                </p>
+                                                                                <a href="#" class="reply"><span class="fa fa-reply"></span>Reply</a>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <?php } ?>
 
-                            <?php   if (isset($_SESSION['administrator_online']) && !empty($_SESSION['administrator_online']) ) { ?>
+                                                                <hr>
+                                                            </li>
+                                                        </ul>
+                                        <?php } ?>
+                                </section><!-- /#comments -->
 
-                                <section id="leave-reply">
-                                                <header><h2 class="no-border">Comente</h2></header>
-                                                
-                                                <form role="form" id="" method="post" action="#">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <textarea class="form-control" id="" rows="5" name="" required></textarea>
-                                                            </div><!-- /.form-group -->
-                                                        </div><!-- /.col-md-12 -->
-                                                    </div><!-- /.row -
-                                                </form><!-- /#form-contact -->
+                                <?php   if (isset($_SESSION['administrator_online']) && !empty($_SESSION['administrator_online']) ) { ?>
 
-                                            </section>
+                                    <section id="leave-reply">
+                                                    <header><h2 class="no-border">Comente</h2></header>
+                                                    
+                                                    <form role="form" id="" method="post" action="#">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <textarea class="form-control" id="" rows="5" name="" required></textarea>
+                                                                </div><!-- /.form-group -->
+                                                            </div><!-- /.col-md-12 -->
+                                                        </div><!-- /.row -
+                                                    </form><!-- /#form-contact -->
 
-                            <?php 
-                            }
-                            else { ?>
-                            <h2>Faça login para comentar<h2>
+                                                </section>
 
-                            <?php } ?>
+                                <?php 
+                                }
+                                else { ?>
+                                <h2>Faça login para comentar<h2>
 
-                       <!-- end comentarios -->
+                                <?php } ?>
+
+                        <!-- end comentarios -->
                     </div>
                     <!--end main-content-->
                 </div>
@@ -375,7 +376,7 @@
         <!--end container-->
     </div>
     <!--end page-content-->
-
+</div>
    
 
 

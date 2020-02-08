@@ -191,6 +191,7 @@
                         <a href="about-us.html">Sobre Nós</a>
                         <a href="listing.html">Republicas</a>
                     </div>
+                    
                 </div>
                 <div class="bg-transfer"><img src="<?php echo BASE_URL; ?>assets/img/footer-bg.jpg" alt=""></div>
             </div>
@@ -200,7 +201,6 @@
     </div>
     <!--end page-wrapper-->
     <a href="#page-header" class="to-top scroll" data-show-after-scroll="600"><i class="fa fa-hand-o-up"></i></a>
-
     <div class="modal fade login" id="loginModal">
               <div class="modal-dialog login animated">
                   <div class="modal-content">
